@@ -1,0 +1,6 @@
+# whitelist: só o livro e o workflow vão ao repo
+/*
+!/.gitignore
+!/.github
+!/livro
+.DS_Store

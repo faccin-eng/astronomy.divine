@@ -1,0 +1,472 @@
+:root {
+  --papel: #f4efe6;
+  --tinta: #2b2520;
+  --secundario: #6f655b;
+  --salvia: #7f9277;
+  --roma: #8c2f39;
+  --fibra: rgba(43, 37, 32, 0.045);
+  --escala: 1;
+  --lateral: 19rem;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --papel: #15130f;
+    --tinta: #e9e2d4;
+    --secundario: #a39a8c;
+    --salvia: #9fb196;
+    --roma: #c25a63;
+    --fibra: rgba(233, 226, 212, 0.035);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dia"] {
+  --papel: #f4efe6;
+  --tinta: #2b2520;
+  --secundario: #6f655b;
+  --salvia: #7f9277;
+  --roma: #8c2f39;
+  --fibra: rgba(43, 37, 32, 0.045);
+  color-scheme: light;
+}
+
+:root[data-theme="noite"] {
+  --papel: #15130f;
+  --tinta: #e9e2d4;
+  --secundario: #a39a8c;
+  --salvia: #9fb196;
+  --roma: #c25a63;
+  --fibra: rgba(233, 226, 212, 0.035);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--papel);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--tinta);
+  background-color: var(--papel);
+  background-image: radial-gradient(var(--fibra) 0.55px, transparent 0.55px);
+  background-size: 3px 3px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.indice-livro:hover,
+.indice-nome:hover,
+.indice-nome:hover .versalete,
+.indice-poemas a:hover {
+  color: var(--roma);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--salvia);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--salvia) 35%, transparent);
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+#progresso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 40;
+  pointer-events: none;
+}
+
+#progresso-barra {
+  display: block;
+  height: 1px;
+  width: 0;
+  background: var(--salvia);
+}
+
+#menu,
+.controles button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.45rem;
+  color: var(--secundario);
+  font-size: 0.95rem;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+}
+
+.controles button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+#palco {
+  margin-left: var(--lateral);
+  padding: 4.5rem 16px 40vh;
+}
+
+.coluna {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-size: calc(1rem * var(--escala));
+}
+
+
+.versalete {
+  font-weight: 500;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--salvia);
+}
+
+.abertura .versalete {
+  font-size: 0.85em;
+}
+
+.titulo-capitulo {
+  margin-top: 0.45rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.3em, 6vw, 3.35em);
+  line-height: 1.12;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.epigrafe {
+  margin-top: 1.35rem;
+  color: var(--secundario);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.linha {
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.linha:empty {
+  min-height: 1em;
+}
+
+.folha-vazia {
+  min-height: calc(100svh - 13rem);
+}
+
+.em-branco {
+  margin-top: 22vh;
+  margin-bottom: 14vh;
+  color: var(--tinta);
+  font-size: 1.15em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0.34;
+}
+
+.cabeca-poema {
+  margin-bottom: 1.9rem;
+  text-align: left;
+}
+
+.titulo-poema {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.45em;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.titulo-poema.sem-titulo {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.subtitulo {
+  margin-top: 0.25rem;
+  color: var(--secundario);
+  font-size: 0.98em;
+  font-style: italic;
+}
+
+.versos {
+  font-size: 1.2em;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.estrofe {
+  margin: 0;
+}
+
+.estrofe + .estrofe {
+  margin-top: 1.45em;
+}
+
+.verso {
+  display: block;
+  padding-left: 1.25em;
+  text-indent: -1.25em;
+  overflow-wrap: break-word;
+}
+
+.nota {
+  white-space: pre-line;
+  max-width: 36em;
+  margin: 2.75rem 0 0;
+  color: var(--salvia);
+  font-size: 0.92em;
+  font-style: italic;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+
+.nota::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 1px;
+  margin-bottom: 0.75rem;
+  background: var(--salvia);
+}
+
+@media (min-width: 1400px) {
+  .com-nota {
+    position: relative;
+  }
+
+  .com-nota .nota {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 1.5rem);
+    width: 200px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .com-nota .nota::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #lateral { transition: none !important; }
+}
+
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+#lateral {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+  width: var(--lateral);
+  overflow-y: auto;
+  padding: 1.6rem 1rem 3rem 1.5rem;
+  background: var(--papel);
+  border-right: 1px solid color-mix(in srgb, var(--tinta) 10%, transparent);
+  scrollbar-width: thin;
+}
+
+.indice-livro {
+  display: block;
+  margin-bottom: 1.6rem;
+  color: var(--secundario);
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.indice-cap {
+  margin: 0 0 1.3rem;
+}
+
+.indice-nome {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.15rem 0 0.15rem 0.6rem;
+  border-left: 2px solid transparent;
+  color: var(--tinta);
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.indice-poemas {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.indice-poemas a {
+  display: block;
+  padding: 0.18rem 0 0.18rem 0.6rem;
+  border-left: 2px solid transparent;
+  color: var(--secundario);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+#indice a.ativo,
+.indice-livro.ativo {
+  color: var(--roma);
+  border-left-color: var(--roma);
+}
+
+.indice-nome.ativo .versalete {
+  color: var(--roma);
+}
+
+.indice-livro {
+  padding-left: 0.6rem;
+  border-left: 2px solid transparent;
+}
+
+#menu {
+  display: none;
+}
+
+#veu {
+  position: fixed;
+  inset: 0;
+  z-index: 22;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+#veu[hidden] {
+  display: none;
+}
+
+.capa {
+  min-height: 80svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.titulo-capa {
+  font-weight: 400;
+  font-size: clamp(3.1em, 9vw, 5em);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.dedicatoria-texto {
+  max-width: 26rem;
+  font-size: 1.15em;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.capitulo {
+  padding-top: 18vh;
+}
+
+.poema-sec {
+  padding-top: 14vh;
+}
+
+.folha-vazia {
+  min-height: 50svh;
+}
+
+@media (max-width: 860px) {
+  :root { --lateral: 0rem; }
+
+  #lateral {
+    width: min(19rem, 85vw);
+    transform: translateX(-100%);
+    transition: transform 220ms ease;
+  }
+
+  .gaveta-aberta #lateral {
+    transform: translateX(0);
+  }
+
+  #menu {
+    display: inline-flex;
+  }
+}
+
+#topo {
+  position: fixed;
+  top: 0;
+  left: var(--lateral);
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-height: 52px;
+  padding: env(safe-area-inset-top) 8px 0;
+  background: linear-gradient(var(--papel) 60%, transparent);
+  pointer-events: none;
+}
+
+#topo > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 860px) {
+  #topo {
+    justify-content: space-between;
+  }
+}

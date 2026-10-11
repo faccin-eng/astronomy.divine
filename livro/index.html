@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efe6">
+  <title>Pra você, Isa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progresso" aria-hidden="true"><span id="progresso-barra"></span></div>
+
+  <aside id="lateral">
+    <nav id="indice" aria-label="Índice"></nav>
+  </aside>
+  <div id="veu" hidden></div>
+
+  <header id="topo">
+    <button type="button" id="menu" aria-label="Índice" aria-controls="lateral">Índice</button>
+    <div class="controles">
+      <button type="button" id="fonte-menos" aria-label="A−">A−</button>
+      <button type="button" id="fonte-mais" aria-label="A+">A+</button>
+      <button type="button" id="tema" aria-label="Noite">Noite</button>
+    </div>
+  </header>
+
+  <main id="palco">
+    <div id="pagina" class="coluna"></div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
