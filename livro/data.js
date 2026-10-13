@@ -79,16 +79,7 @@ window.LIVRO = {
     "shakti",
     "o-ar",
     "tempo",
-    "teus-olhos"
-   ],
-   "nota": null
-  },
-  {
-   "id": "epilogo",
-   "numero": "Epílogo",
-   "titulo": "Em construção",
-   "epigrafe": "Das coisas que ainda quero fazer, e são tantas",
-   "poemas": [
+    "teus-olhos",
     "a-paz"
    ],
    "nota": null
@@ -96,10 +87,12 @@ window.LIVRO = {
   {
    "id": "vi",
    "numero": "VI",
-   "titulo": "",
+   "titulo": "Soluços",
    "epigrafe": "Nesta vida eu nunca mais\nestarei à deriva.",
-   "poemas": [],
-   "em_branco": "a ser escrito na volta",
+   "poemas": [
+    "o-poema",
+    "a-rodoviaria"
+   ],
    "nota": null
   }
  ],
@@ -398,6 +391,22 @@ window.LIVRO = {
    "subtitulo": null,
    "primeiro_verso": "The black light that comes from your eyes",
    "texto": "The black light that comes from your eyes\nit's just astounding, I can't look away.\n\nPlease god, let me look at those eyes\njust this once in my life\nbefore everything goes away forever.\n\nShe's the prettiest girl I've ever met\nAnd I know I could be the one for her,\nThe one that would never let her down,\nThe one that would be there for her.\n\nHer serpentine hair really messes me up,\nSo perfectly arranged\nlike an art masterpiece,\nI don't know who painted it\nand that's just irrelevant.\n\nI'm condemned now to wait,\nTo face the anxiety of waiting\nfor the message that'll never come,\nDamn, but I can't see this as a failure\nbecause I've connected with you somehow.\n\nIt's okay if you don't call,\nWouldn't be the first time\nthat I feel like a weirdo.\n\nPerhaps one day I'll have a dream\nwhere I can touch your hair\nand put it behind your ear,\nWho am I fooling? Even in the dream\nI would just be too cautious\nto do anything like that.",
+   "nota": null
+  },
+  "o-poema": {
+   "id": "o-poema",
+   "titulo": "O poema",
+   "subtitulo": null,
+   "primeiro_verso": "Seus olhos se tornaram mesmo",
+   "texto": "Seus olhos se tornaram mesmo\num par de cachoeiras\nnesses derradeiros dias de minha estada.\n\nEu só posso sentir alegria,\nUma triste alegria,\nPor todo esse amor que cultivamos.\n\nA saudade já me manda voltar,\nAfinal, não estou acostumado\na não ter o que o coração me pede.\n\nVocê bem se lembra como era\nnaqueles dias onde ainda havia\numa rodovia do café entre nós.\n\nPois eu sinto aquele mesmo aperto,\nQue hoje eu consigo traduzir\ncomo soluços no coração.\n\nMas que alegria eu sinto\npor poder viver um amor\ntão belo.",
+   "nota": null
+  },
+  "a-rodoviaria": {
+   "id": "a-rodoviaria",
+   "titulo": "A rodoviária",
+   "subtitulo": null,
+   "primeiro_verso": "Eu não gosto que esperem comigo",
+   "texto": "Eu não gosto que esperem comigo\nenquanto não chega o ônibus\nque irá me levar,\nEsperar os outros já basta.\n\nA verdade é que eu não queria\nficar ansioso pela ansiedade,\nEntão eu prefiro me precipitar\nnessa tal missão da minha vida.\n\nOs 500km agora são reais,\nA dor é real,\nE eu, o que sou?\n\nA ansiedade nem faz\ncócegas,\nNo isolamento urbano\nanseio respirar você.",
    "nota": null
   }
  }
