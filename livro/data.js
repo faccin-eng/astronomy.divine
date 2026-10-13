@@ -90,8 +90,8 @@ window.LIVRO = {
    "titulo": "Soluços",
    "epigrafe": "Nesta vida eu nunca mais\nestarei à deriva.",
    "poemas": [
-    "o-poema",
-    "a-rodoviaria"
+    "a-rodoviaria",
+    "o-poema"
    ],
    "nota": null
   }
